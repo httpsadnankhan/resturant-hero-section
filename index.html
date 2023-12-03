@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Hero Section for Resturant</title>
+</head>
+<style>
+    * {
+  box-sizing: border-box;
+  
+}
+
+body {
+  margin: 0px;
+  font-family: 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+ a{
+    text-decoration: none;
+ }
+.nav {
+  height: 50px;
+  width: 100%;
+  background-color: #fff;
+  position: relative;
+  margin-left: 25px;
+  margin-top: 5px;
+  z-index: 100;
+}
+ @media (max-width:768px) {
+    .nav {
+        height: 50px;
+        width: 100%;
+        background-color: #fff;
+        position: relative;
+        margin-left: 0;
+        margin-top: 5px;
+        }
+ }
+.nav > .nav-header {
+  display: inline;
+}
+
+.nav > .nav-header > .nav-title {
+  display: inline-block;
+  font-size: 22px;
+  color: black;
+  padding: 10px 10px 10px 10px;
+}
+
+.nav > .nav-btn {
+  display: none;
+}
+
+.nav > .nav-links {
+  display: inline;
+  float: right;
+  margin-right: 10%;
+  font-size: 18px;
+}
+
+.nav > .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: black;
+}
+
+
+
+.nav > #nav-check {
+  display: none;
+}
+
+@media (max-width:825px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #eee;
+  }
+  .nav > .nav-links {
+    position: absolute;
+    display: block;
+    width: 100%;
+    background-color: #333;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav > .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav > #nav-check:not(:checked) ~ .nav-links {
+    height: 0px;
+  }
+  .nav > #nav-check:checked ~ .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+  .Sign-up-btn{
+    background-color: #8EC81A;
+    height: 50px;
+    width: 120px;
+    color: white;
+    border-radius: 2rem;
+    text-align: center;
+  }
+  main{
+    background-color: #fff;
+    
+  }
+  .main-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 98%;
+    overflow-x: hidden;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  .headings-container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
+    margin-right: 20%;
+  }
+  .main-heading{
+    font-size: 4rem;
+    font-weight: bolder;
+    margin: 0;
+    padding: 0;
+  }
+  .heading-description{
+    font-size: 1rem;
+  }
+  .call-to-action-container{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    margin-top: 1.2rem;
+  }
+  .order-btn{
+    height: auto;
+    width: 150px;
+    background-color: #8EC81A;
+    border-radius: 5rem;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  .menu-btn{
+    height: auto;
+    width: 150px;
+    background-color:#EE930A;
+    border-radius: 5rem;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  .book-table-container{
+    display: flex;
+    flex-direction: row;
+  }
+  .table-container-item{
+    display: flex;
+    flex-direction: column;
+  }
+  .table{
+    display: flex;
+    gap: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    padding: 25px;
+    border-radius: 1rem;
+  }
+    .table label {
+        font-size: 1rem; 
+        margin-bottom: 10px;
+    }
+
+    .table input {
+        padding: 8px;
+        border-radius: 5rem;
+    }
+  .table-heading{
+    font-size: 1.3rem;
+  }
+  .table-btn{
+    height: auto;
+    width: 150px;
+    background-color: #8EC81A;
+    border-radius: 5rem;
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+   .image-container{
+    z-index: 0;
+   }
+   
+   .menu-image {
+    height: 95%;
+    width: 70%;
+    margin-left: 6rem;
+    z-index: 100;
+    margin-top: 2.3rem;
+   }
+
+ @media (max-width:768px) {
+ .main-container {
+    grid-template-columns: 1fr;
+    overflow-x: hidden;
+  }
+  
+  .main-container > :first-child {
+    order: 2;
+  }
+  
+  .main-container > :last-child {
+    order: 1;
+  }
+  .headings-container{
+    width: 95%;
+  }
+  .main-heading{
+    font-size: 1.5rem;
+    width: 95%;
+    margin-right: -5%;
+  }
+  .table{
+    flex-direction: column;
+    width: 90vw;
+  }
+  .table label {
+        width: 98%;
+    }
+     .menu-image {
+    height: 98%;
+    width: 90%;
+    margin-left: 0.1rem;
+   }
+ }
+ @media (min-width:769px)and (max-width:1300px) {
+     .menu-image {
+    height: 80%;
+    width: 100%;
+    margin-left: 0.1rem;
+   }
+   .main-container{
+    grid-template-columns: repeat(auto-fit, minmax(40%, 50%));
+   }
+ }
+</style>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            Your Logo
+          </div>
+        </div>
+        <div class="nav-btn">
+          <label for="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+        
+        <div class="nav-links">
+          <a href="#" target="_blank">HOME</a>
+          <a href="#" target="_blank">MENU</a>
+          <a href="#" target="_blank">ABOUT US</a>
+          <a href="#" target="_blank">CONTACT</a>
+          <a href="#" target="_blank"><i class="fa-solid fa-cart-shopping"></i></a>
+          <a href="#" target="_blank">SIGN IN</a>
+          <a href="#" target="_blank"class="Sign-up-btn" style="color: white;">SIGN UP</a>
+        </div>
+      </div>
+      <main>
+            <div class="main-container">
+                <div class="headings-container">
+                    <h1 class="main-heading">Discover Food Taste Our Best Healthy & Tasty</h1>
+                    <p class="heading-description">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Consequatur laboriosam impedit, vero ad architecto repudiandae, hic perferendis provident.</p>
+                    <div class="call-to-action-container">
+                        <a href="" class="order-btn">ORDER NOW</a>
+                        <a href="" class="menu-btn"><i class="fa-solid fa-play btn-icon"></i>SEE MENU</a>
+                    </div>
+                    <div class="book-table-container">
+                        <div class="table-container-item">
+                         <h4 class="table-heading">Book A Table</h4>
+                         <div class="table">
+                         <label for="">Date</label>
+                         <input type="date">
+                         <label for="">Time</label>
+                         <input type="time">
+                         <label for="">Email</label>
+                         <input type="email" name="" id="" placeholder="Enter Your Email">
+                         <button class="table-btn">Book a Table</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="image-container">
+                    <img src="resturant-image.png" alt=""
+                    class="menu-image">
+                </div>
+            </div>
+      </main>
+
+      <script src="https://kit.fontawesome.com/9498bdc1c3.js" crossorigin="anonymous"></script>
+</body>
+</html>
