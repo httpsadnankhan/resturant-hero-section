@@ -30,3 +30,7 @@ This project aims to create a responsive and visually appealing restaurant hero 
 Explore the codebase, contribute to the project, and let's create a fantastic, responsive restaurant website together! 🚀✨
 
 #ResponsiveDesign #WebDevelopment #OpenSource #HTML #CSS #JavaScript #codeifya #codebyadnan
+
+## Preview
+
+![Screenshot (19)](https://github.com/httpsadnankhan/resturant-hero-section/assets/120323286/fd3862d0-e842-461a-aa2e-c0042ccaa480)
